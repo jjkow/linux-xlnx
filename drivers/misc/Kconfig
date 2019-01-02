@@ -537,6 +537,15 @@ config MISC_RTSX
 	tristate
 	default MISC_RTSX_PCI || MISC_RTSX_USB
 
+config ZYNQ_PARTIAL_TESTER
+    tristate "Zynq Partial Tester"
+    help
+        This driver registers FPGA partial reconfiguration time
+        using external pins. External pins should be connected to
+        signal 'DONE' and 'RUN' on the other FPGA. 'DONE' is an
+        internal FPGA signal, 'RUN' is a PR module pin which tells
+        that PR module is running.
+
 source "drivers/misc/jesd204b/Kconfig"
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
