@@ -530,6 +530,12 @@ config XILINX_TRAFGEN
 
 	  If unsure, say N
 
+config ZYNQ_PUF
+    tristate "Zynq PUF - random generator"
+    help
+        This driver registers FPGA IP with PUF:
+        Inverter ring PUF
+
 source "drivers/misc/jesd204b/Kconfig"
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
