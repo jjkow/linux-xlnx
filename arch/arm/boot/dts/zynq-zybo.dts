@@ -33,10 +33,10 @@
 		reset-gpios = <&gpio0 46 1>;
 	};
 
-    //zynq_partial_tester {
-    //    compatible = "";
-    //    reg = <0x43C00000 0x1000>;
-    //};
+    zynq_partial_tester {
+        compatible = "reconftimer";
+        reg = <0x43C00000 0x1000>;
+    };
 };
 
 &clkc {
